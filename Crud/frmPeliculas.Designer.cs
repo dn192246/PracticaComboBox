@@ -177,7 +177,7 @@
             this.MaximizeBox = false;
             this.Name = "frmPeliculas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Películas";
+            this.Text = "Administración de Productos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).EndInit();
             this.ResumeLayout(false);
