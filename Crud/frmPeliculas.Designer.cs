@@ -34,12 +34,13 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.dgvPeliculas = new System.Windows.Forms.DataGridView();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.numCantidad = new System.Windows.Forms.NumericUpDown();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.btnNewCat = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAgregar
@@ -100,34 +101,34 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // dgvPeliculas
+            // dgvProductos
             // 
-            this.dgvPeliculas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPeliculas.Location = new System.Drawing.Point(38, 272);
-            this.dgvPeliculas.Name = "dgvPeliculas";
-            this.dgvPeliculas.ReadOnly = true;
-            this.dgvPeliculas.RowHeadersVisible = false;
-            this.dgvPeliculas.RowHeadersWidth = 51;
-            this.dgvPeliculas.RowTemplate.Height = 24;
-            this.dgvPeliculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPeliculas.Size = new System.Drawing.Size(729, 207);
-            this.dgvPeliculas.TabIndex = 9;
+            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Location = new System.Drawing.Point(38, 272);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.ReadOnly = true;
+            this.dgvProductos.RowHeadersVisible = false;
+            this.dgvProductos.RowHeadersWidth = 51;
+            this.dgvProductos.RowTemplate.Height = 24;
+            this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProductos.Size = new System.Drawing.Size(729, 207);
+            this.dgvProductos.TabIndex = 9;
             // 
-            // numericUpDown1
+            // numCantidad
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(341, 85);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 30);
-            this.numericUpDown1.TabIndex = 10;
+            this.numCantidad.Location = new System.Drawing.Point(341, 85);
+            this.numCantidad.Name = "numCantidad";
+            this.numCantidad.Size = new System.Drawing.Size(120, 30);
+            this.numCantidad.TabIndex = 10;
             // 
-            // comboBox1
+            // cmbCategoria
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(340, 139);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(190, 29);
-            this.comboBox1.TabIndex = 11;
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(340, 139);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(227, 29);
+            this.cmbCategoria.TabIndex = 11;
             // 
             // label3
             // 
@@ -138,16 +139,32 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Categoría";
             // 
+            // btnNewCat
+            // 
+            this.btnNewCat.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnNewCat.FlatAppearance.BorderSize = 0;
+            this.btnNewCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewCat.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewCat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnNewCat.Location = new System.Drawing.Point(592, 136);
+            this.btnNewCat.Name = "btnNewCat";
+            this.btnNewCat.Size = new System.Drawing.Size(30, 34);
+            this.btnNewCat.TabIndex = 13;
+            this.btnNewCat.Text = "+";
+            this.btnNewCat.UseVisualStyleBackColor = false;
+            this.btnNewCat.Click += new System.EventHandler(this.btnNewCat_Click);
+            // 
             // frmPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(809, 510);
+            this.Controls.Add(this.btnNewCat);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.dgvPeliculas);
+            this.Controls.Add(this.cmbCategoria);
+            this.Controls.Add(this.numCantidad);
+            this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.txtNombre);
@@ -161,8 +178,8 @@
             this.Name = "frmPeliculas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Películas";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,10 +193,11 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.DataGridView dgvPeliculas;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.NumericUpDown numCantidad;
+        private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnNewCat;
     }
 }
 

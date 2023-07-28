@@ -17,9 +17,10 @@ namespace Crud
             InitializeComponent();
         }
 
-        private void frmPeliculas_Load(object sender, EventArgs e)
+        private void btnNewCat_Click(object sender, EventArgs e)
         {
-            
+            frmCategoria cat = new frmCategoria();
+            cat.ShowDialog();
         }
     }
 }
