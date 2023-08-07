@@ -16,5 +16,20 @@ namespace Crud
         {
             InitializeComponent();
         }
+
+        private void frmCategoria_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

@@ -41,7 +41,7 @@
             this.dgvCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategorias.Location = new System.Drawing.Point(13, 211);
-            this.dgvCategorias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCategorias.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.ReadOnly = true;
             this.dgvCategorias.RowHeadersVisible = false;
@@ -55,17 +55,18 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.SystemColors.Control;
             this.btnEliminar.Location = new System.Drawing.Point(299, 119);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(144, 55);
             this.btnEliminar.TabIndex = 18;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtCategoria
             // 
             this.txtCategoria.Location = new System.Drawing.Point(171, 40);
-            this.txtCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(334, 28);
             this.txtCategoria.TabIndex = 16;
@@ -84,12 +85,13 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.SystemColors.Control;
             this.btnAgregar.Location = new System.Drawing.Point(92, 119);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(5);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(144, 55);
             this.btnAgregar.TabIndex = 13;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // frmCategoria
             // 
@@ -104,11 +106,12 @@
             this.Controls.Add(this.btnAgregar);
             this.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrar Categorías";
+            this.Load += new System.EventHandler(this.frmCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

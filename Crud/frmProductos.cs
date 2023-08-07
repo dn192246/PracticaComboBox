@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Crud
 {
-    public partial class frmPeliculas : Form
+    public partial class frmProductos : Form
     {
-        public frmPeliculas()
+        public frmProductos()
         {
             InitializeComponent();
         }
@@ -21,6 +21,26 @@ namespace Crud
         {
             frmCategoria cat = new frmCategoria();
             cat.ShowDialog();
+        }
+
+        private void frmProductos_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+    
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
